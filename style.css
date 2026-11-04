@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-size: 14px;
 }
 
 /* .macondo-regular {
@@ -17,10 +18,12 @@
 body {
   background-color: #3b14af;
   font-family: "Macondo", cursive;
+  font-size: 1.5rem;
 }
 
 .titre {
   color: #3b14af;
+  font-size: 2.5rem;
 }
 .machine-invocation {
   display: flex;
@@ -30,8 +33,53 @@ body {
   justify-content: center;
   margin: 2rem 10%;
   padding: 1rem 0.5rem;
-  min-height: 50vh;
-  background-color: #ffd500;
+  min-height: 80vh;
+  background-color: #f7cf05;
   border-radius: 50%;
-  box-shadow: 5px 5px 10px white;
+  box-shadow: 5px 5px 10px #fcbf42;
+  gap: 0.5rem;
+}
+
+#invocation {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  font-size: 1.7rem;
+}
+
+label {
+  font-size: 1.7rem;
+}
+#prenom,
+#creature {
+  font-size: 1.5rem;
+  font-family: "Macondo", cursive;
+  border-radius: 5px;
+  padding: 0.2rem;
+}
+
+.invoquer {
+  all: unset;
+  cursor: pointer;
+  padding: 0.3rem 0.5rem;
+  border-radius: 10px;
+  background-color: #2d0e87;
+  color: #f7a805;
+  margin-top: 2rem;
+}
+
+.invoquer:focus-visible {
+  outline: dotted 5px #583cad;
+}
+.invoquer:focus {
+  color: #2d0e87;
+  background-color: #f7a805;
+}
+
+#prenom:focus-visible {
+  outline: dotted 5px #583cad;
+}
+
+#creature:focus-visible {
+  outline: dotted 5px #583cad;
 }
