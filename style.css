@@ -76,10 +76,15 @@ label {
   background-color: #f7a805;
 }
 
-#prenom:focus-visible {
+/* #prenom:focus-visible {
   outline: dotted 5px #583cad;
+} */
+#prenom:focus {
+  background-color: #583cad;
+  color: #fcdd42;
 }
 
-#creature:focus-visible {
-  outline: dotted 5px #583cad;
+#creature:focus {
+  background-color: #583cad;
+  color: #fcdd42;
 }
