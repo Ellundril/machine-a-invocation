@@ -3,6 +3,7 @@ const btnInvoquer = document.querySelector(".invoquer");
 const message = document.getElementById("message");
 const resultat = document.getElementById("resultat");
 const machineInvocation = document.querySelector(".invocation");
+const btnRecommencer = document.querySelector(".recommencer");
 
 btnInvoquer.addEventListener("click", (event) => {
   event.preventDefault();

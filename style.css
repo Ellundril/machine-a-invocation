@@ -54,7 +54,7 @@ label {
   padding: 0.2rem;
 }
 
-.invoquer {
+.btn {
   all: unset;
   cursor: pointer;
   padding: 0.3rem 0.5rem;
@@ -65,13 +65,13 @@ label {
   animation: clignote 1s infinite ease-in-out;
 }
 
-.invoquer:focus {
+.btn:focus {
   color: #2d0e87;
   background-color: #f7a805;
   outline: solid 5px #583cad;
 }
 
-.invoquer:hover {
+.btn:hover {
   transform: scale(1.1);
   color: #2d0e87;
   background-color: #f7a805;
@@ -88,6 +88,10 @@ label {
   background-color: #583cad;
   color: #fcdd42;
   outline: solid 5px white;
+}
+
+#message {
+  font-size: 2rem;
 }
 
 @keyframes clignote {
