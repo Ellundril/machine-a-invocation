@@ -11,10 +11,6 @@
   font-style: normal;
 } */
 
-.cache {
-  display: none;
-}
-
 body {
   background-color: #3b14af;
   font-family: "Macondo", cursive;
@@ -25,7 +21,7 @@ body {
   color: #3b14af;
   font-size: 2.5rem;
 }
-.machine-invocation {
+.machine {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -104,4 +100,8 @@ label {
   100% {
     transforme: scale(1);
   }
+}
+
+.cache {
+  display: none;
 }
