@@ -66,25 +66,42 @@ label {
   background-color: #2d0e87;
   color: #f7a805;
   margin-top: 2rem;
+  animation: clignote 1s infinite ease-in-out;
 }
 
-.invoquer:focus-visible {
-  outline: dotted 5px #583cad;
-}
 .invoquer:focus {
   color: #2d0e87;
   background-color: #f7a805;
+  outline: solid 5px #583cad;
 }
 
-/* #prenom:focus-visible {
-  outline: dotted 5px #583cad;
-} */
+.invoquer:hover {
+  transform: scale(1.1);
+  color: #2d0e87;
+  background-color: #f7a805;
+  outline: solid 5px #583cad;
+}
+
 #prenom:focus {
   background-color: #583cad;
   color: #fcdd42;
+  outline: solid 5px white;
 }
 
 #creature:focus {
   background-color: #583cad;
   color: #fcdd42;
+  outline: solid 5px white;
+}
+
+@keyframes clignote {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transforme: scale(1);
+  }
 }
