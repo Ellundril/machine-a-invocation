@@ -11,9 +11,10 @@ btnInvoquer.addEventListener("click", (event) => {
   const prenom = document.getElementById("prenom").value;
   if (prenom === "") {
     alert("Il faut entrer ton prénom pour que la magie opère");
+  } else {
+    const creature = document.getElementById("creature").value;
+    message.textContent = `${prenom}, ${creature} a entendu ton appel et te suivra tout le Bloc 1 !`;
+    machineInvocation.classList.add("cache");
+    resultat.classList.remove("cache");
   }
-  const creature = document.getElementById("creature").value;
-  message.textContent = `${prenom}, ${creature} a entendu ton appel et te suivra tout le Bloc 1 !`;
-  machineInvocation.classList.add("cache");
-  resultat.classList.remove("cache");
 });
