@@ -77,6 +77,12 @@ label {
   background-color: #f7a805;
   outline: solid 5px #583cad;
 }
+.recommencer {
+  font-size: 1.5rem;
+  animation:
+    cache 6s ease-in-out forwards,
+    clignote 2s 3s infinite ease-in-out;
+}
 
 #prenom:focus {
   background-color: #583cad;
@@ -125,6 +131,15 @@ label {
   }
   100% {
     transform: rotate(-10deg);
+  }
+}
+
+@keyframes cache {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 

@@ -34,6 +34,7 @@ function invocation() {
     machineInvocation.classList.add("cache");
     resultat.classList.remove("cache");
     creatureEmoji.classList.add("invoquee");
+    btnRecommencer.classList.add("recommencer");
   }
 }
 
@@ -45,6 +46,7 @@ btnInvoquer.addEventListener("click", (event) => {
 btnRecommencer.addEventListener("click", () => {
   resultat.classList.add("cache");
   machineInvocation.classList.remove("cache");
+  btnRecommencer.classList.remove("recommencer");
   prenom.value = "";
   creatureEmoji.classList.remove("invoquee");
 });
