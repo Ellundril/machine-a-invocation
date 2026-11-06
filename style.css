@@ -97,6 +97,12 @@ label {
 .creature-emoji {
   font-size: 10rem;
 }
+.invoquee {
+  animation:
+    apparition 2s ease-in,
+    invocation 2s 2.2s infinite ease-in-out;
+}
+
 @keyframes clignote {
   0% {
     transform: scale(0.9);
@@ -106,6 +112,27 @@ label {
   }
   100% {
     transform: scale(0.9);
+  }
+}
+
+@keyframes invocation {
+  0% {
+    transform: rotate(-20deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(-20deg);
+  }
+}
+
+@keyframes apparition {
+  from {
+    transform: scale(0.1);
+  }
+  to {
+    transform: scale(1);
   }
 }
 

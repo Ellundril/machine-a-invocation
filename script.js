@@ -33,6 +33,7 @@ function invocation() {
     message.textContent = `${prenomChoisi}, ${creatureChoisie} a entendu ton appel et te suivra tout le Bloc 1 !`;
     machineInvocation.classList.add("cache");
     resultat.classList.remove("cache");
+    creatureEmoji.classList.add("invoquee");
   }
 }
 
@@ -45,4 +46,5 @@ btnRecommencer.addEventListener("click", () => {
   resultat.classList.add("cache");
   machineInvocation.classList.remove("cache");
   prenom.value = "";
+  creatureEmoji.classList.remove("invoquee");
 });
