@@ -31,14 +31,14 @@ function invocation() {
     }
     creatureEmoji.textContent = creatureAffiche;
     message.textContent = `${prenomChoisi}, ${creatureChoisie} a entendu ton appel et te suivra tout le Bloc 1 !`;
+    machineInvocation.classList.add("cache");
+    resultat.classList.remove("cache");
   }
 }
 
 btnInvoquer.addEventListener("click", (event) => {
   event.preventDefault();
   invocation();
-  machineInvocation.classList.add("cache");
-  resultat.classList.remove("cache");
 });
 
 btnRecommencer.addEventListener("click", () => {
