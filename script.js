@@ -5,17 +5,19 @@ const resultat = document.getElementById("resultat");
 const machineInvocation = document.querySelector(".invocation");
 const btnRecommencer = document.querySelector(".recommencer");
 const creatureEmoji = document.querySelector(".creature-emoji");
+const prenom = document.getElementById("prenom");
+const creature = document.getElementById("creature");
 
 btnInvoquer.addEventListener("click", (event) => {
   event.preventDefault();
   console.log("click");
-  const prenom = document.getElementById("prenom").value;
-  if (prenom === "") {
+  const prenomChoisi = prenom.value;
+  if (prenomChoisi === "") {
     alert("Il faut entrer ton prénom pour que la magie opère");
   } else {
-    const creature = document.getElementById("creature").value;
+    const creatureChoisie = creature.value;
     let creatureAffiche = "";
-    switch (creature) {
+    switch (creatureChoisie) {
       case "le Chat-Octo":
         creatureAffiche = "🐙";
         break;
