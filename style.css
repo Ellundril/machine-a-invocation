@@ -11,10 +11,6 @@
   font-style: normal;
 } */
 
-.cache {
-  display: none;
-}
-
 body {
   background-color: #3b14af;
   font-family: "Macondo", cursive;
@@ -25,7 +21,7 @@ body {
   color: #3b14af;
   font-size: 2.5rem;
 }
-.machine-invocation {
+.machine {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -58,7 +54,7 @@ label {
   padding: 0.2rem;
 }
 
-.invoquer {
+.btn {
   all: unset;
   cursor: pointer;
   padding: 0.3rem 0.5rem;
@@ -69,13 +65,13 @@ label {
   animation: clignote 1s infinite ease-in-out;
 }
 
-.invoquer:focus {
+.btn:focus {
   color: #2d0e87;
   background-color: #f7a805;
   outline: solid 5px #583cad;
 }
 
-.invoquer:hover {
+.btn:hover {
   transform: scale(1.1);
   color: #2d0e87;
   background-color: #f7a805;
@@ -94,6 +90,13 @@ label {
   outline: solid 5px white;
 }
 
+#message {
+  font-size: 2rem;
+}
+
+.creature-emoji {
+  font-size: 10rem;
+}
 @keyframes clignote {
   0% {
     transform: scale(1);
@@ -104,4 +107,8 @@ label {
   100% {
     transforme: scale(1);
   }
+}
+
+.cache {
+  display: none;
 }

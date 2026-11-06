@@ -13,22 +13,25 @@
     <title>Machine à invocation</title>
   </head>
   <body>
-    <section class="machine-invocation">
+    <section class="machine invocation">
       <h1 class="titre">La machine à invocation</h1>
       <form id="invocation">
-        <label for="prenom">Prénom</label><input type="text" id="prenom" />
+        <label for="prenom">Prénom</label>
+        <input type="text" id="prenom" required />
         <label for="creature">Créature</label>
-        <select name="" id="creature">
-          <option value="chat">🐙 le Chat-Octo</option>
-          <option value="dragon">🐉 le Dragon-Debug</option>
-          <option value="licorne">🦄 la Licorne-CSS</option>
-          <option value="renard">🦊 le Renard-Refacto</option>
+        <select name="" id="creature" required>
+          <option value="le Chat-Octo">🐙 le Chat-Octo</option>
+          <option value="le Dragon-Debug">🐉 le Dragon-Debug</option>
+          <option value="la Licorne-CSS">🦄 la Licorne-CSS</option>
+          <option value="le Renard-Refacto">🦊 le Renard-Refacto</option>
         </select>
-        <button class="invoquer">Invoquer</button>
+        <button class="btn invoquer" type="submit">Invoquer</button>
       </form>
     </section>
-    <section id="resultat" class="cache">
+    <section id="resultat" class="machine cache">
+      <span class="creature-emoji"></span>
       <p id="message"></p>
+      <button class="btn recommencer">Recommencer</button>
     </section>
   </body>
   <script src="script.js"></script>
