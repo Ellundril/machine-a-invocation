@@ -62,7 +62,7 @@ label {
   background-color: #2d0e87;
   color: #f7a805;
   margin-top: 2rem;
-  animation: clignote 1s infinite ease-in-out;
+  animation: clignote 2s infinite ease-in-out;
 }
 
 .btn:focus {
@@ -99,13 +99,13 @@ label {
 }
 @keyframes clignote {
   0% {
-    transform: scale(1);
+    transform: scale(0.9);
   }
   50% {
-    transform: scale(1.2);
+    transform: scale(1);
   }
   100% {
-    transforme: scale(1);
+    transform: scale(0.9);
   }
 }
 
