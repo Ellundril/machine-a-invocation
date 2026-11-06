@@ -77,6 +77,12 @@ label {
   background-color: #f7a805;
   outline: solid 5px #583cad;
 }
+.recommencer {
+  font-size: 1.5rem;
+  animation:
+    cache 6s ease-in-out forwards,
+    clignote 2s 3s infinite ease-in-out;
+}
 
 #prenom:focus {
   background-color: #583cad;
@@ -92,11 +98,18 @@ label {
 
 #message {
   font-size: 2rem;
+  white-space: pre-line; /*permet de prendre en compte le \n pour les sauts de ligne*/
 }
 
 .creature-emoji {
   font-size: 10rem;
 }
+.invoquee {
+  animation:
+    apparition 2s ease-in,
+    invocation 2s 2.2s infinite ease-in-out;
+}
+
 @keyframes clignote {
   0% {
     transform: scale(0.9);
@@ -106,6 +119,36 @@ label {
   }
   100% {
     transform: scale(0.9);
+  }
+}
+
+@keyframes invocation {
+  0% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+
+@keyframes cache {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes apparition {
+  from {
+    transform: scale(0.1);
+  }
+  to {
+    transform: scale(1);
   }
 }
 

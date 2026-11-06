@@ -30,9 +30,11 @@ function invocation() {
         break;
     }
     creatureEmoji.textContent = creatureAffiche;
-    message.textContent = `${prenomChoisi}, ${creatureChoisie} a entendu ton appel et te suivra tout le Bloc 1 !`;
+    message.textContent = `${prenomChoisi},\n${creatureChoisie} a entendu ton appel et te suivra tout le Bloc 1 !`;
     machineInvocation.classList.add("cache");
     resultat.classList.remove("cache");
+    creatureEmoji.classList.add("invoquee");
+    btnRecommencer.classList.add("recommencer");
   }
 }
 
@@ -44,5 +46,7 @@ btnInvoquer.addEventListener("click", (event) => {
 btnRecommencer.addEventListener("click", () => {
   resultat.classList.add("cache");
   machineInvocation.classList.remove("cache");
+  btnRecommencer.classList.remove("recommencer");
   prenom.value = "";
+  creatureEmoji.classList.remove("invoquee");
 });
