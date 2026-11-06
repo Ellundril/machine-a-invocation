@@ -92,6 +92,7 @@ label {
 
 #message {
   font-size: 2rem;
+  white-space: pre-line; /*permet de prendre en compte le \n pour les sauts de ligne*/
 }
 
 .creature-emoji {

@@ -30,7 +30,7 @@ function invocation() {
         break;
     }
     creatureEmoji.textContent = creatureAffiche;
-    message.textContent = `${prenomChoisi}, ${creatureChoisie} a entendu ton appel et te suivra tout le Bloc 1 !`;
+    message.textContent = `${prenomChoisi},\n${creatureChoisie} a entendu ton appel et te suivra tout le Bloc 1 !`;
     machineInvocation.classList.add("cache");
     resultat.classList.remove("cache");
     creatureEmoji.classList.add("invoquee");
