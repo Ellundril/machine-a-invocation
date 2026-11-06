@@ -5,17 +5,17 @@ const resultat = document.getElementById("resultat");
 const machineInvocation = document.querySelector(".invocation");
 const btnRecommencer = document.querySelector(".recommencer");
 const creatureEmoji = document.querySelector(".creature-emoji");
+const prenom = document.getElementById("prenom");
+const creature = document.getElementById("creature");
 
-btnInvoquer.addEventListener("click", (event) => {
-  event.preventDefault();
-  console.log("click");
-  const prenom = document.getElementById("prenom").value;
-  if (prenom === "") {
+function invocation() {
+  const prenomChoisi = prenom.value;
+  if (prenomChoisi === "") {
     alert("Il faut entrer ton prénom pour que la magie opère");
   } else {
-    const creature = document.getElementById("creature").value;
+    const creatureChoisie = creature.value;
     let creatureAffiche = "";
-    switch (creature) {
+    switch (creatureChoisie) {
       case "le Chat-Octo":
         creatureAffiche = "🐙";
         break;
@@ -30,8 +30,19 @@ btnInvoquer.addEventListener("click", (event) => {
         break;
     }
     creatureEmoji.textContent = creatureAffiche;
-    message.textContent = `${prenom}, ${creature} a entendu ton appel et te suivra tout le Bloc 1 !`;
+    message.textContent = `${prenomChoisi}, ${creatureChoisie} a entendu ton appel et te suivra tout le Bloc 1 !`;
     machineInvocation.classList.add("cache");
     resultat.classList.remove("cache");
   }
+}
+
+btnInvoquer.addEventListener("click", (event) => {
+  event.preventDefault();
+  invocation();
+});
+
+btnRecommencer.addEventListener("click", () => {
+  resultat.classList.add("cache");
+  machineInvocation.classList.remove("cache");
+  prenom.value = "";
 });
