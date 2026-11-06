@@ -30,8 +30,14 @@ btnInvoquer.addEventListener("click", (event) => {
         break;
     }
     creatureEmoji.textContent = creatureAffiche;
-    message.textContent = `${prenom}, ${creature} a entendu ton appel et te suivra tout le Bloc 1 !`;
+    message.textContent = `${prenomChoisi}, ${creatureChoisie} a entendu ton appel et te suivra tout le Bloc 1 !`;
     machineInvocation.classList.add("cache");
     resultat.classList.remove("cache");
   }
+});
+
+btnRecommencer.addEventListener("click", () => {
+  resultat.classList.add("cache");
+  machineInvocation.classList.remove("cache");
+  prenom.value = "";
 });
